@@ -1,4 +1,4 @@
-##  Sneaker Shop Mangaement App project(SSMA), 09/10/2023
+##  Sneaker Shop Mangaement App project(SSMA), 10/10/2023
 
 
 ## Author
@@ -20,8 +20,8 @@ Deployed Frontend can be accessed here [Blog](https://nextblog-k-koech.vercel.ap
 
 
 ## Known Bugs
-    The application images dissapears in heroku
-    Otherwise application works perfectly well, no bugs.
+The application images dissapears in heroku
+Otherwise application works perfectly well, no bugs.
 
 ## Technologies used
     - HTML 
@@ -35,7 +35,7 @@ Deployed Frontend can be accessed here [Blog](https://nextblog-k-koech.vercel.ap
     - email :: mwangimark57@gmail.com
     - phone :: +254770614345
 
-### License
+## License
 ```MIT License
 
 Copyright (c) 2023 Mark Mwangi
