@@ -1,7 +1,8 @@
-####  Sneaker Shop Mangaement App project(SSMA), 09/10/2023
+##  Sneaker Shop Mangaement App project(SSMA), 09/10/2023
 
 
-#### **By Mark Mwangi**
+## Author
+Mark Mwangi
 
 ## Project Description
    For this project, I am going to build a Single Page Application (SPA).My frontend will be built with HTML, CSS, and JavaScript and will communicate with a public API.The project is a simple Sneaker Shop Management App/System.
@@ -35,7 +36,6 @@ Deployed Frontend can be accessed here [Blog](https://nextblog-k-koech.vercel.ap
     - phone :: +254770614345
 
 ### License
-
 ```MIT License
 
 Copyright (c) 2023 Mark Mwangi
