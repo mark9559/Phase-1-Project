@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sneaker Shop</title>
-    <link rel="stylesheet" href="./index.css"> <!-- Include your CSS file here -->
+    <link rel="stylesheet" href="./style.css"> <!-- Include your CSS file here -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
@@ -23,13 +23,13 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cart</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Orders</a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -42,6 +42,8 @@
     </header>
 
     <main>
+        <p class="shop-intro">Welcome to Kicks Buzz - Your ultimate destination for sneaker heads! We bring you the latest, most stylish, and exclusive collection of sneakers to elevate your sneaker game. Whether you're a sports fanatic or a fashion-forward trendsetter, you'll find the perfect pair that suits your style. Explore our catalog and step up your sneaker game today.</p>
+
         <!-- Product Catalog -->
         <section id="product-catalog">
             <h2>Sneakers Catalog</h2>
@@ -70,6 +72,8 @@
                             <p class="card-text">Price: $150.00</p>
                             <p class="card-text">Available Sizes: US 7, US 8, US 9, US 10</p>
                             <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-primary like-button">Like</button>
+
                         </div>
                     </div>
                 </div>
@@ -84,6 +88,8 @@
                             <p class="card-text">Price: $150.00</p>
                             <p class="card-text">Available Sizes: US 7, US 8, US 9, US 10</p>
                             <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-primary like-button">Like</button>
+
                         </div>
                     </div>
                 </div>
@@ -98,6 +104,8 @@
                             <p class="card-text">Price: $150.00</p>
                             <p class="card-text">Available Sizes: US 7, US 8, US 9, US 10</p>
                             <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-primary like-button">Like</button>
+ 
                         </div>
                     </div>
                 </div>
@@ -105,23 +113,13 @@
         </section>
 
         <!-- Individual Product Page -->
-        <section id="product-details">
-            <h2>Product Details</h2>
-            <div class="product-details">
-                <img src="nike_air_jordan_1.jpg" alt="Air Jordan 1">
-                <h3>Air Jordan 1</h3>
-                <p>Description: The iconic Air Jordan 1 sneakers.</p>
-                <p>Price: $150.00</p>
-                <label for="size">Select Size:</label>
-                <select id="size">
-                    <option value="US 7">US 7</option>
-                    <option value="US 8">US 8</option>
-                    <option value="US 9">US 9</option>
-                    <option value="US 10">US 10</option>
-                </select>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
+        <section id="favourite-sneakers">
+            <h2>Favourite Sneakers</h2>
+            <ul id="favorites-list">
+                <!-- Favorite sneakers will be displayed here -->
+            </ul>
         </section>
+        
 
         <!-- Shopping Cart -->
         <section id="shopping-cart">
@@ -138,13 +136,28 @@
         </section>
 
         <!-- Order Confirmation -->
-        <section id="order-confirmation">
-            <h2>Order Confirmation</h2>
-            <div class="order-summary">
-                <!-- Display order details here -->
-                <!-- Show a summary of ordered items, user details form, and a "Confirm Order" button -->
+        <!-- Order Confirmation -->
+<section id="order-confirmation">
+    <h2>Order Confirmation</h2>
+    <form id="order-form">
+        <div class="order-summary">
+            <!-- Display order details here -->
+            <div id="summary-items">
+                <!-- Ordered items will be displayed here -->
             </div>
-        </section>
+            <div id="user-details">
+                <!-- User details form -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+        </div>
+        <button class="btn btn-primary" id="confirm-order">Confirm Order</button>
+    </form>
+</section>
+
     </main>
 
     <footer>
@@ -152,7 +165,7 @@
         
     </footer>
 
-    <script src="./script.js"></script> <!-- Include your JavaScript file here -->
+    <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>

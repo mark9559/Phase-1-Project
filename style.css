@@ -5,18 +5,26 @@ body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
+.shop-intro {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    /* Add more custom styles here */
+}
+
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
 
-header {
+/* header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
-}
+} */
 
 header h1 {
     font-size: 2rem;
@@ -58,9 +66,13 @@ h2 {
 }
 
 .product-card {
-    border: 1px solid #ccc;
-    padding: 10px;
+    flex: 0 0 calc(25% - 20px); /* Adjust the width as needed */
     margin-bottom: 20px;
+    padding: 20px;
+    border: none;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card img {
@@ -123,4 +135,18 @@ footer {
     padding: 10px 0;
     background-color: #333;
     color: #fff;
+}
+
+.product-card:hover {
+    /* border: 2px solid #333; Change the border color on hover */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Add a box shadow on hover */
+    transform: scale(1.05); /* Scale up the card on hover */
+    transition: all 0.3s; /* Add a smooth transition effect */
+}
+
+/* grid-template-columns: repeat(auto-fill,minmax(200px, 1fr)); */
+
+.like-button-green {
+    background-color: green;
+    color: white;
 }
