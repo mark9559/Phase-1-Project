@@ -5,7 +5,7 @@ let cart = []; // To store the items in the cart
 // Function to fetch data from db.json
 async function fetchSneakers() {
     try {
-        const response = await fetch('http://localhost:3000/sneakers'); // Replace with your API endpoint
+        const response = await fetch('http://localhost:3000/sneakers'); 
         sneakersData = await response.json();
 
         // Display sneakers
