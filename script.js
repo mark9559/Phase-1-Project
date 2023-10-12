@@ -5,7 +5,7 @@ let cart = []; // To store the items in the cart
 // Function to fetch data from db.json
 async function fetchSneakers() {
     try {
-        const response = await fetch('http://localhost:3000/sneakers'); 
+        const response = await fetch('http://localhost:3000/sneakers'); // Replace with your API endpoint
         sneakersData = await response.json();
 
         // Display sneakers
@@ -14,6 +14,28 @@ async function fetchSneakers() {
         console.error('Error fetching data: ', error);
     }
 }
+
+// Function to update the cart data in the database
+async function updateCartInDatabase() {
+    try {
+        const response = await fetch('http://localhost:3000/cart', {
+            method: 'PUT', // Use PUT request to update the cart
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ cart }),
+        });
+
+        if (response.ok) {
+            console.log('Cart data updated in the database.');
+        } else {
+            console.error('Error updating cart data in the database.');
+        }
+    } catch (error) {
+        console.error('Error updating cart data: ', error);
+    }
+}
+
 
 // Function to display sneakers in rows of 4 cards
 function displaySneakers(sneakers) {
@@ -81,8 +103,9 @@ function addToCart(event) {
 
     if (selectedSneaker) {
         cart.push(selectedSneaker);
+        updateCartInDatabase()
         updateCartUI();
-        
+        ;
     }
 }
 
@@ -98,6 +121,7 @@ function updateCartUI() {
             <button class="btn btn-danger remove-from-cart" data-sneaker-id="${sneaker.id}">Remove</button>
         `;
         cartItems.appendChild(li);
+        updateCartInDatabase();
     });
 
     // Calculate and display the total price
@@ -118,6 +142,8 @@ function updateCartUI() {
 function removeFromCart(event) {
     const sneakerId = parseInt(event.target.getAttribute('data-sneaker-id'));
     cart = cart.filter(sneaker => sneaker.id !== sneakerId);
+    updateCartInDatabase();     // Update the cart data in the database
+
     updateCartUI();
 }
 
