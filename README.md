@@ -56,7 +56,7 @@ Mark Mwangi
        
 ## Live link
 
-Deployed Frontend can be accessed here [Blog](https://nextblog-k-koech.vercel.app/)   
+The Deployed Frontend can be accessed here [Sneaker-Shop](https://mark9559.github.io/Phase-1-Project/)   
 
 
 ## Known Bugs
