@@ -150,3 +150,7 @@ footer {
     background-color: green;
     color: white;
 }
+
+html {
+    scroll-behavior: smooth;
+}

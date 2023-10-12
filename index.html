@@ -11,7 +11,7 @@
 <body>
     <header>
         <!-- <h1>Sneaker Shop</h1> -->
-        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Kicks Buzz</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,20 +20,20 @@
               <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#product-catalog">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#product-catalog">About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Cart</a>
+                    <a class="nav-link" href="#shopping-cart">Cart</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Orders</a>
+                    <a class="nav-link" href="#order-confirmation">Orders</a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search Sneaker" aria-label="Search">
+                  <input class="form-control me-2" type="search" placeholder="Search Sneaker" aria-label="Search" id="search-input">
                   <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
               </div>
