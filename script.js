@@ -6,7 +6,7 @@ let cart = [];
 // Function to fetch data from db.json
 async function fetchSneakers() {
     try {
-        const response = await fetch('http://localhost:3000/sneakers');
+        const response = await fetch('https://sneaker-shop-m8bz.onrender.com/sneakers');
         sneakersData = await response.json();
 
         // Display sneakers
