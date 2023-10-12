@@ -4,38 +4,49 @@
 ## Author
 Mark Mwangi
 
+## Table of Contents
+- [Project Description](#project-description)
+- [Setup/Installation Requirements](#setup/installation-requirements)
+- [Live Link](#live-link)
+- [Known Bugs](#known-bugs)
+- [Technologies Used](#technologies-used)
+- [Support and contact details](#support-and-contact-details)
+- [License](#license)
+
 ## Project Description
+
    For this project, I am going to build a Sneaker Shop Management System.My frontend will be built with HTML, CSS, and JavaScript and will communicate with a public API.
    The Sneaker Shop Management System is a single page web application designed to efficiently manage the operations of a sneaker store. It provides the necessary features for both the customers and the store owners to interact with the sneaker inventory and perform various actions. This system aims to streamline the process of managing and purchasing sneakers, making it a user-friendly and efficient experience.
 
     Key Features:
 
-    Product Management:
+    1.Product Management:
 
     Create, Read, Update, and Delete sneaker products.Store owners can easily add, modify, or remove sneakers from the inventory through a user-friendly interface.
 
-    Product Listing:
+    2.Product Listing:
 
     Display a list of available sneakers.Sneaker products are organized and showcased in an organized catalog, making it simple for customers to browse through the inventory.
 
-    Product Details:
+    3.Product Details:
 
     Allow users to view details of individual sneakers.
     Customers can access comprehensive information about each sneaker, including images, descriptions, prices, and available sizes.
 
-    Shopping Cart:
+    4.Shopping Cart:
 
     Implement a shopping cart for adding/removing sneakers.Customers can add their desired sneakers to a virtual shopping cart for easy tracking of their selections.
 
-    Cart Management:
+    5.Cart Management:
 
     Calculate and display the total price of items in the cart.The system computes the total cost of the items in the cart, making it convenient for customers to stay within their budget.
 
-    Purchase Simulation:
+    6.Purchase Simulation:
 
     Process a simulated purchase (no real payment processing required).Customers can simulate a purchase, and upon confirmation, the system records the order and adjusts the inventory.
 
 ## Setup/Installation Requirements
+
     - Download zip in the code section of github to your desired folder
     - Extract the files
     - Open the folder with vs code.
@@ -44,14 +55,16 @@ Mark Mwangi
     - And your application is running.
        
 ## Live link
+
 Deployed Frontend can be accessed here [Blog](https://nextblog-k-koech.vercel.app/)   
 
 
 ## Known Bugs
-The application images dissapears in heroku
+
 Otherwise application works perfectly well, no bugs.
 
 ## Technologies used
+
     - HTML 
     - CSS
     - JavaScript
@@ -60,10 +73,12 @@ Otherwise application works perfectly well, no bugs.
     - 
 
 ## Support and contact details
+
     - email :: mwangimark57@gmail.com
     - phone :: +254770614345
 
 ## License
+
 ```MIT License
 
 Copyright (c) 2023 Mark Mwangi
