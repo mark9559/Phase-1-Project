@@ -60,7 +60,7 @@ Deployed Frontend can be accessed here [Blog](https://nextblog-k-koech.vercel.ap
 
 
 ## Known Bugs
-
+The Database fails to update the cart array after a sneaker is added/removed from the cart.
 Otherwise application works perfectly well, no bugs.
 
 ## Technologies used
