@@ -1,11 +1,12 @@
+
 // Global variables
-let sneakersData = []; // To store the sneakers data
-let cart = []; // To store the items in the cart
+let sneakersData = []; 
+let cart = []; 
 
 // Function to fetch data from db.json
 async function fetchSneakers() {
     try {
-        const response = await fetch('http://localhost:3000/sneakers'); // Replace with your API endpoint
+        const response = await fetch('http://localhost:3000/sneakers');
         sneakersData = await response.json();
 
         // Display sneakers
@@ -19,7 +20,7 @@ async function fetchSneakers() {
 async function updateCartInDatabase() {
     try {
         const response = await fetch('http://localhost:3000/cart', {
-            method: 'PUT', // Use PUT request to update the cart
+            method: 'PUT', // request to update the cart
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -142,7 +143,7 @@ function updateCartUI() {
 function removeFromCart(event) {
     const sneakerId = parseInt(event.target.getAttribute('data-sneaker-id'));
     cart = cart.filter(sneaker => sneaker.id !== sneakerId);
-    updateCartInDatabase();     // Update the cart data in the database
+    updateCartInDatabase();  
 
     updateCartUI();
 }
@@ -158,11 +159,11 @@ function isSneakerLiked(sneakerTitle) {
 // Function to toggle the like status of a sneaker
 function toggleLikeStatus(sneakerTitle) {
     if (isSneakerLiked(sneakerTitle)) {
-        // If the sneaker is liked, remove it from the favorites
+        // If the sneaker is liked, add it to the favorites
         const index = likedSneakers.indexOf(sneakerTitle);
         likedSneakers.splice(index, 1);
     } else {
-        // If the sneaker is not liked, add it to the favorites
+        // If the sneaker is not liked, remove it from the favorites
         likedSneakers.push(sneakerTitle);
     }
 }
@@ -181,6 +182,7 @@ function updateFavoriteSneakers() {
 }
 
 // Add event listeners for "Like" buttons
+
 const likeButtons = document.querySelectorAll('.like-button');
 likeButtons.forEach((likeButton) => {
     likeButton.addEventListener('click', (event) => {
@@ -213,18 +215,12 @@ confirmOrderButton.addEventListener('click', (event) => {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
 
-    // Here, you can send the order data (cart items, user details) to your server or perform other actions as needed.
-
-    // Example: Display a confirmation message
     alert(`Thank you, ${name}! Your order has been confirmed. Check your email at ${email} for order details.`);
 });
 
-// Update the order summary when the page loads
-updateOrderSummary();
+updateOrderSummary();// Update the order summary when the page loads
 
+updateFavoriteSneakers();// Initialize the "Favourite Sneakers" section
 
-// Initialize the "Favourite Sneakers" section
-updateFavoriteSneakers();
+fetchSneakers();// Initialize the application by fetching data
 
-// Initialize the application by fetching data
-fetchSneakers();
