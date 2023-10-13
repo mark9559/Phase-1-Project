@@ -106,7 +106,7 @@ function addToCart(event) {
         cart.push(selectedSneaker);
         updateCartInDatabase()
         updateCartUI();
-        ;
+        alert(`Added ${selectedSneaker.name} to the cart.`);
     }
 }
 
@@ -144,8 +144,8 @@ function removeFromCart(event) {
     const sneakerId = parseInt(event.target.getAttribute('data-sneaker-id'));
     cart = cart.filter(sneaker => sneaker.id !== sneakerId);
     updateCartInDatabase();  
-
     updateCartUI();
+    alert(`Removed ${removedSneaker.name} from the cart.`);
 }
 
 // Array to store liked sneakers
@@ -191,6 +191,10 @@ likeButtons.forEach((likeButton) => {
         const sneakerTitle = titleElement.textContent;
         toggleLikeStatus(sneakerTitle);
         updateFavoriteSneakers();
+        likeButton.classList.toggle('like-button-green'); // Toggle the green button class
+        
+        alert(`You liked ${sneakerTitle}!`);
+
     });
 });
 
