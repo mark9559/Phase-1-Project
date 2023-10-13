@@ -142,10 +142,14 @@ function updateCartUI() {
 // Function to remove a sneaker from the cart
 function removeFromCart(event) {
     const sneakerId = parseInt(event.target.getAttribute('data-sneaker-id'));
-    cart = cart.filter(sneaker => sneaker.id !== sneakerId);
-    updateCartInDatabase();  
-    updateCartUI();
-    alert(`Removed ${removedSneaker.name} from the cart.`);
+    const removedSneaker = cart.find(sneaker => sneaker.id === sneakerId);
+
+    if (removedSneaker) {
+        cart = cart.filter(sneaker => sneaker.id !== sneakerId);
+        updateCartInDatabase();
+        updateCartUI();
+        alert(`${removedSneaker.name} has been removed from your cart.`);
+    }
 }
 
 // Array to store liked sneakers
@@ -192,7 +196,7 @@ likeButtons.forEach((likeButton) => {
         toggleLikeStatus(sneakerTitle);
         updateFavoriteSneakers();
         likeButton.classList.toggle('like-button-green'); // Toggle the green button class
-        
+
         alert(`You liked ${sneakerTitle}!`);
 
     });
