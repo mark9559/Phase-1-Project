@@ -60,8 +60,9 @@ The Deployed Frontend can be accessed here [Sneaker-Shop](https://mark9559.githu
 
 
 ## Known Bugs
-The Database fails to update the cart array after a sneaker is added/removed from the cart.
-Otherwise application works perfectly well, no bugs.
+
+    The images fail to load immediately after launching the application.
+    Otherwise the application works perfectly well, no bugs.
 
 ## Technologies used
 
